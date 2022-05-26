@@ -35,7 +35,6 @@ const Form = () => {
               type="range"
               min={minSalary}
               max={maxSalary}
-              //   value={(e) => e.target.value}
               step="5000"
               onChange={handleSalary}
               required

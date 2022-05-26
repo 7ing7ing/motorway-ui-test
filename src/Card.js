@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ModalWindow from "./ModalWindow";
 
 const Card = ({ img, index }) => {
-  //const Card = ({ img, handle, index }) => {
   const [modalWindowActive, setModalWindowActive] = useState(false);
 
   const handleCloseModalWindow = () => {
@@ -20,7 +19,6 @@ const Card = ({ img, index }) => {
           className="card-photo"
           src={`${img.url}.jpg`}
           alt={img.alt_description}
-          //onClick={() => handle(index)}
           onClick={handleOnClick}
         />
       </div>

@@ -1,3 +1,8 @@
+## Update post interview
+
+- Added a header component that contains links to two different pages: Cards and Form (they used to be in the same page)
+- Added a function in the modal window to close it by pressing the keyboard, to make it more accessible.
+
 ## Comments
 
 - Google Chrome browser to test this assignment.

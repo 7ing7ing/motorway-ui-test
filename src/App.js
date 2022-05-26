@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import Card from "./Card";
+import Cards from "./Cards";
 import Form from "./Form";
+import Header from "./Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [images, setImages] = useState();
@@ -25,13 +27,13 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="cards-container">
-        {images &&
-          images.map((img, index) => (
-            <Card img={img} index={index} key={img.id} />
-          ))}
-      </div>
-      <Form />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/card" element={<Cards images={images} />} />
+          <Route path="/form" element={<Form />} />
+        </Routes>
+      </Router>
     </div>
   );
 };

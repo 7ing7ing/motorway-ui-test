@@ -1,6 +1,10 @@
 import React from "react";
 
 const ModalWindow = ({ img, handleCloseModalWindow }) => {
+  document.addEventListener("keypress", function () {
+    handleCloseModalWindow();
+    console.log("hello");
+  });
   return (
     <div className="modalWindowContainer">
       <div
